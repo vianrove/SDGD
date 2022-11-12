@@ -1,0 +1,43 @@
+.navbar {
+    font-size: 1.25rem;
+    color: #657053;
+    background-color: #111C1C;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.left {
+    display: flex;
+    flex:1;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    flex:1;
+    justify-content: center;
+}
+
+.center div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    background-color: #657053;
+}
+
+.center div img {
+    height: 87px;
+    filter: drop-shadow(0 4px 1.5px rgba(0, 0, 0, 0.50));
+}
+
+.right {
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
