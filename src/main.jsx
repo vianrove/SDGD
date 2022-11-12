@@ -18,7 +18,7 @@ root.render(
         <Routes>
             <Route path="/" element={<App />} />
                 <Route path="login" element={<Login />} />
-                    <Route path="register" element={<Register />} />
+                <Route path="register" element={<Register />} />
 
 
                 {/* pagina no encontrada */}            
