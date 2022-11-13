@@ -3,17 +3,10 @@
   font-size: 16px;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: #657053;
   background-color: #070D0C;
   background-image: url(/src/assets/wbook.png);
   background-blend-mode: overlay;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 
   margin: 0;
   padding: 0;
@@ -24,11 +17,19 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
+.flex-wrapper-centered {
+  display: flex;
+  flex-direction: column;
+  min-height: 78.2vh;
+  align-items: center;
+  justify-content: center;
+}
+
 .content-wrapper-extended {
   background-color: #111C1C;
   margin: 50px;
   border-radius: 5px;
-  min-height: 68.3vh;
+  min-width: 50%;
   padding: 25px;
 }
 
@@ -38,14 +39,6 @@ a:-webkit-any-link {
   border-radius: 5px;
   width: max-content;
   padding: 25px;
-}
-
-.flex-wrapper-centered {
-  display: flex;
-  flex-direction: column;
-  min-height: 78.2vh;
-  align-items: center;
-  justify-content: center;
 }
 
 form {
@@ -80,7 +73,7 @@ form label {
   margin-bottom: 0;
 }
 
-form button {
+button {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   font-size: 20px;
@@ -91,4 +84,5 @@ form button {
   border-radius: 5px;
   border: none;
   padding: 15px 25px 15px 25px;
+  cursor: pointer;
 }

@@ -7,7 +7,11 @@ function FAQ() {
     return (
       <div className="FAQ">
         <Navbar/>
-        <p>in construction</p>
+        <div className="flex-wrapper-centered">
+          <div className="content-wrapper">
+            <h1>in construction</h1>  
+          </div>
+        </div>
         <Footer/>
       </div>
     )

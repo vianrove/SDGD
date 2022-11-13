@@ -1,7 +1,6 @@
 import React from "react"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "./styles/signup.css"
 
 class SignUp extends React.Component {
   
@@ -31,7 +30,7 @@ class SignUp extends React.Component {
         <Navbar/>
         <div className="flex-wrapper-centered">
           <div className="content-wrapper">
-            <h1 className="reg">Registra tu cuenta</h1>
+            <h1 style={{fontWeight:"700", fontSize:"50px", textAlign:"center"}}>Registra tu cuenta</h1>
             <form action="" method="post">
               <label htmlFor="firstName">Nombre</label>
               <input type="text" name="firstName" placeholder="Enter your first name" onChange={this.handleChange}/>

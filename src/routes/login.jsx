@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "axios"
 import Cookies from "universal-cookie"
-import "./styles/login.css"
 
 class Login extends React.Component {
  //let url = import.meta.env.VITE_URL_LOGIN;
@@ -37,12 +36,12 @@ class Login extends React.Component {
         <Navbar/>
         <div className="flex-wrapper-centered">
           <div className="content-wrapper">
-            <h1 className="wel">Bienvenido</h1>
+            <h1 style={{fontWeight:"400", fontSize: "50px",  textAlign:"center"}}>Bienvenido</h1>
             <form action="" method="post">
               <input type="text" name="email" placeholder="Ingresa tu correo" onChange={this.handleChange}/>
               <br />
               <input type="password" name="password" placeholder="Ingresa tu contraseña" onChange={this.handleChange}/>
-              <button id="boton" onClick={()=>this.sesionUser()}>Sign Up</button>
+              <button id="boton" onClick={()=>this.sesionUser()}>Login</button>
             </form>
             <p><Link to={"/reset-password"}>Olvidé mi contraseña</Link></p>
             <p>No tienes cuenta? <Link to={"/signup"}>crea una</Link></p>

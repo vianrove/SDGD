@@ -6,7 +6,12 @@ function Notfound(){
     return (
       <div className="error">
         <Navbar/>
-        <img src="NotFoundWeb.png" alt="not found image"/>
+        <div className="flex-wrapper-centered">
+          <div className="content-wrapper">
+            <h1 style={{textAlign: "center"}}>Página no encontrada</h1>
+            <img src="NotFoundWeb.png" alt="not found image"/>
+          </div>
+        </div>
         <Footer/>
       </div>
     )
