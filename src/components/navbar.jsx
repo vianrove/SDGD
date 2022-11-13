@@ -5,8 +5,6 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="left">
-        <Link className="linkText" to="/catalogo">Catalogo</Link>
-        <Link className="linkText" to="/shoppingcart">Mis compras</Link>
       </div>
       <div className="center">
         <div className="imgback">
@@ -16,8 +14,6 @@ const Navbar = () => {
         </div>
       </div>
       <div className="right">
-        <Link className="linkText" to="/profile">Profile</Link>
-        <Link className="linkText" to="/salir">Salir</Link>
       </div>
     </div>
   )
