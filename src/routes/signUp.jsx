@@ -31,19 +31,19 @@ class SignUp extends React.Component {
         <Navbar/>
         <div className="flex-wrapper-centered">
           <div className="content-wrapper">
-            <h1>Registra tu cuenta</h1>
+            <h1 className="reg">Registra tu cuenta</h1>
             <form action="" method="post">
-              <label htmlFor="firstName">Nombre</label><br/>
+              <label htmlFor="firstName">Nombre</label>
               <input type="text" name="firstName" placeholder="Enter your first name" onChange={this.handleChange}/>
-              <label htmlFor="lastName">Apellido</label><br/>
+              <label htmlFor="lastName">Apellido</label>
               <input type="text" name="lastName" placeholder="Enter your last name" onChange={this.handleChange}/>
-              <label htmlFor="age">Edad</label><br/>
+              <label htmlFor="age">Edad</label>
               <input type="number" min="10" max="99" name="age" placeholder="Enter your age" onChange={this.handleChange}/>
-              <label htmlFor="email">Email</label><br/>
+              <label htmlFor="email">Email</label>
               <input type="email" name="email" placeholder="Enter your email" onChange={this.handleChange}/>
-              <label htmlFor="password">Contraseña</label><br/>
+              <label htmlFor="password">Contraseña</label>
               <input type="password" name="password" placeholder="Enter your password" onChange={this.handleChange}/>
-              <label htmlFor="contactNumber">Teléfono de contacto</label><br/>
+              <label htmlFor="contactNumber">Teléfono de contacto</label>
               <input type="password" name="contactNumber" placeholder="Enter your phone number" onChange={this.handleChange}/>
               <button id="boton">Registrar</button>
             </form>

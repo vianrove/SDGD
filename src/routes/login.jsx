@@ -1,8 +1,11 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "axios"
 import Cookies from "universal-cookie"
+import "./styles/login.css"
+
 class Login extends React.Component {
  //let url = import.meta.env.VITE_URL_LOGIN;
  //url=url+'login';
@@ -32,15 +35,19 @@ class Login extends React.Component {
     return (
       <div className="inputForms">
         <Navbar/>
-        <form action="" method="post">
-            <label htmlFor="email">your email address</label><br/>
-            <input type="text" name="email" placeholder="Enter your email address" onChange={this.handleChange}/>
-            <br/>
-            <label htmlFor="password">Password</label><br/>
-            <input type="password" name="password" placeholder="Enter your password" onChange={this.handleChange}/>
-            <br/>
-            <button id="boton" onClick={()=>this.sesionUser()}>Sign Up</button>
-        </form>
+        <div className="flex-wrapper-centered">
+          <div className="content-wrapper">
+            <h1 className="wel">Bienvenido</h1>
+            <form action="" method="post">
+              <input type="text" name="email" placeholder="Ingresa tu correo" onChange={this.handleChange}/>
+              <br />
+              <input type="password" name="password" placeholder="Ingresa tu contraseña" onChange={this.handleChange}/>
+              <button id="boton" onClick={()=>this.sesionUser()}>Sign Up</button>
+            </form>
+            <p><Link to={"/reset-password"}>Olvidé mi contraseña</Link></p>
+            <p>No tienes cuenta? <Link to={"/signup"}>crea una</Link></p>
+          </div>
+        </div>
         <Footer/>                
       </div>
     )
