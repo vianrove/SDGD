@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import "./styles/signup.css"
 
 class SignUp extends React.Component {
   
@@ -26,34 +27,31 @@ class SignUp extends React.Component {
   }
   render(){ 
     return (
-      <div className="inputForm">
+      <div>
         <Navbar/>
-        <form action="" method="post">
-            <label htmlFor="firstName">First name</label><br/>
-            <input type="text" name="firstName" placeholder="Enter your first name" onChange={this.handleChange}/>
-            <br/>
-            <label htmlFor="lastName">Last name</label><br/>
-            <input type="text" name="lastName" placeholder="Enter your last name" onChange={this.handleChange}/>
-            <br/>
-            <label htmlFor="age">your age</label><br/>
-            <input type="number" min="10" max="99" name="age" placeholder="Enter your age" onChange={this.handleChange}/>
-            <br/>
-            <label htmlFor="email">email</label><br/>
-            <input type="email" name="email" placeholder="Enter your email" onChange={this.handleChange}/>
-            <br/>
-            <label htmlFor="password">Password</label><br/>
-            <input type="password" name="password" placeholder="Enter your password" onChange={this.handleChange}/>
-            <br/>
-            <label htmlFor="contactNumber">phone number</label><br/>
-            <input type="password" name="contactNumber" placeholder="Enter your phone number" onChange={this.handleChange}/>
-            <br/>
-            <button id="boton">Sign Up</button>
-        </form>
+        <div className="flex-wrapper-centered">
+          <div className="content-wrapper">
+            <h1>Registra tu cuenta</h1>
+            <form action="" method="post">
+              <label htmlFor="firstName">Nombre</label><br/>
+              <input type="text" name="firstName" placeholder="Enter your first name" onChange={this.handleChange}/>
+              <label htmlFor="lastName">Apellido</label><br/>
+              <input type="text" name="lastName" placeholder="Enter your last name" onChange={this.handleChange}/>
+              <label htmlFor="age">Edad</label><br/>
+              <input type="number" min="10" max="99" name="age" placeholder="Enter your age" onChange={this.handleChange}/>
+              <label htmlFor="email">Email</label><br/>
+              <input type="email" name="email" placeholder="Enter your email" onChange={this.handleChange}/>
+              <label htmlFor="password">Contraseña</label><br/>
+              <input type="password" name="password" placeholder="Enter your password" onChange={this.handleChange}/>
+              <label htmlFor="contactNumber">Teléfono de contacto</label><br/>
+              <input type="password" name="contactNumber" placeholder="Enter your phone number" onChange={this.handleChange}/>
+              <button id="boton">Registrar</button>
+            </form>
+          </div>
+        </div>
         <Footer/>
-        
       </div>
     )
   }
-      
 }
 export default SignUp;
