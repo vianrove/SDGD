@@ -1,12 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from 'react'
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
-function App() {
-  const arr = [
-    { ISBN:1, Title:'Calculo vectorial', muestra:200, venta:187, precio:50, img1:'', img2:'' },{ ISBN:2, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'', img2:'' }]
-  const url =`${import.meta.env.VITE_URL_STORE}catalogo`;
-  const [todos,setTodos] = useState()
+//rutas
+import Home from './Routes/home';
+import Notfound from './routes/notfound';
+import Login from './Routes/login';
+import SignUp from './Routes/signUp';
+import Profile from './Routes/perfilUser';
+import FAQ from './Routes/FAQ';
+import EditProfile from './Routes/editProfile';
+import ShoppingCart from './Routes/shoppingCart';
+const App = ()=>{
+
+  const arr = [{ ISBN:1, Title:'Calculo vectorial', muestra:200, venta:187, precio:50, img1:'', img2:'' },{ ISBN:2, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'', img2:'' }]
+  
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home products={arr}/>} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/edit" element={<EditProfile/>}/>
+            <Route path="/shoppingcart" element={<ShoppingCart/>}/>
+            <Route path='/FAQ' element={<FAQ/>}/>
+            {/* pagina no encontrada */}            
+            <Route path="*" element={<Notfound />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
+
+export default App;
+
+
+/*const url =`${import.meta.env.VITE_URL_STORE}catalogo`;
+  const [todos,setTodos] = useState()*/
   /*const fetchApi = async ()=>{
     const response = await fetch(url);
     
@@ -22,31 +53,3 @@ function App() {
     .catch((err)=>console.log(err));
     //fetchApi()
   },[])*/
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
-
-export default App;

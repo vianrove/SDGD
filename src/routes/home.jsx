@@ -1,8 +1,8 @@
 import React from "react"
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-import Card from "../components/card";
-
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Card from '../components/card';
+import '../components/styles/Home.css'
 class Home extends React.Component {
   render(){
     console.log(this.props.products);

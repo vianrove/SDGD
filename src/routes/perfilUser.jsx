@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const userPrototype = {
     firstName:'',
@@ -19,11 +19,11 @@ class Profile extends React.Component{
         return(
         <div className="profile">
             <Navbar/>
-            <span>Nombre:<br/>{userPrototype.firstName}</span>
-            <span>Nombre:<br/>{userPrototype.lastName}</span>
-            <span>Nombre:<br/>{userPrototype.age}</span>
-            <span>Nombre:<br/>{userPrototype.email}</span>
-            <span>Nombre:<br/>{userPrototype.contactNumber}</span>
+            <span>Nombre:<br/>{userPrototype.firstName}</span><br/>
+            <span>apellido:<br/>{userPrototype.lastName}</span><br/>
+            <span>edad:<br/>{userPrototype.age}</span><br/>
+            <span>email:<br/>{userPrototype.email}</span><br/>
+            <span>telefono:<br/>{userPrototype.contactNumber}</span><br/>
             <button onClick={()=>this.handleChange()}>Editar</button>
             <Footer/>
         </div>

@@ -41,3 +41,11 @@
     justify-content: flex-end;
     align-items: center;
 }
+
+.linkText{
+    text-decoration: none;
+    color: #657053;
+    margin: 5%;
+    font-family: sans-serif;
+    font-weight:bold;
+}

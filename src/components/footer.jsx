@@ -1,12 +1,11 @@
-function Footer() {
+import "./styles/footer.css";
 
-    return (
-      <div className="Footer">
-        <ul>
-          <li>Proyects UTB 2022</li>
-          <li>Made by group H</li>
-        </ul>
-      </div>
-    )
-  }
-export default Footer;
+const Footer = () => {
+  return (
+    <div className="footer">
+      <p className="text">Sistema de gestión documental &copy;2022</p>
+    </div>
+  )
+}
+  
+export default Footer

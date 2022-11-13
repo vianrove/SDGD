@@ -1,17 +1,26 @@
-import { Link } from "react-router-dom"
-import React from 'react'
-function Navbar(){
+import "./styles/Navbar.css";
+import { Link } from "react-router-dom";
 
-    return (
-      <div className="navbar">
-        <ul>
-          <li><Link className="left" to="/">Catalogo</Link></li>
-          <li><Link className="left">Mis Compras</Link></li>
-          <li><Link className="right" >foto</Link></li>
-          <li><Link className="right" >salir</Link></li>
-        </ul>
+const Navbar = () => {
+  return (
+    <div className="navbar">
+      <div className="left">
+        <Link className="linkText" to="/catalogo">Catalogo</Link>
+        <Link className="linkText" to="/shoppingcart">Mis compras</Link>
       </div>
-    )
-  }
-export default Navbar;  
-
+      <div className="center">
+        <div className="imgback">
+          <Link to={"/"}>
+            <img src="/buho.png" alt="buho logo"/>
+          </Link>
+        </div>
+      </div>
+      <div className="right">
+        <Link className="linkText" to="/profile">Profile</Link>
+        <Link className="linkText" to="/salir">Salir</Link>
+      </div>
+    </div>
+  )
+}
+  
+export default Navbar
