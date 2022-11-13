@@ -19,11 +19,23 @@
   padding: 0;
 }
 
-.content-wrapper {
+a:-webkit-any-link {
+  color: #406164;
+  text-decoration: none;
+}
+
+.content-wrapper-extended {
   background-color: #111C1C;
   margin: 50px;
   border-radius: 5px;
   min-height: 68.3vh;
+  padding: 25px;
+}
+
+.content-wrapper {
+  background-color: #111C1C;
+  margin: 50px;
+  border-radius: 5px;
   width: max-content;
   padding: 25px;
 }
@@ -31,6 +43,7 @@
 .flex-wrapper-centered {
   display: flex;
   flex-direction: column;
+  min-height: 78.2vh;
   align-items: center;
   justify-content: center;
 }
@@ -42,7 +55,11 @@ form {
 }
 
 form input {
-  min-width: 200px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 5px;
+  min-width: 250px;
   height: 25px;
   color: #111C1C;
   background-color: #406164;
@@ -58,7 +75,7 @@ form input::placeholder {
 
 form label {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 25px;
   margin-bottom: 0;
 }
