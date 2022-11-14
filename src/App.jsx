@@ -10,6 +10,9 @@ import Profile from './Routes/perfilUser';
 import FAQ from './Routes/FAQ';
 import EditProfile from './Routes/editProfile';
 import ShoppingCart from './Routes/shoppingCart';
+import CrearElemento from './Routes/crearElemento';
+import ActualizarInv from './Routes/ActualizarInv';
+import Inventario from './Routes/inventario';
 const App = ()=>{
 
   const arr = [{ ISBN:1, Title:'Calculo vectorial', muestra:200, venta:187, precio:50, img1:'', img2:'' },{ ISBN:2, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'', img2:'' }]
@@ -24,6 +27,9 @@ const App = ()=>{
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/edit" element={<EditProfile/>}/>
             <Route path="/shoppingcart" element={<ShoppingCart/>}/>
+            <Route path="/inventario" element={<Inventario products={arr}/>}/>
+            <Route path="/create" element={<CrearElemento/>}/>
+            <Route path="/update" element={<ActualizarInv/>}/>
             <Route path='/FAQ' element={<FAQ/>}/>
             {/* pagina no encontrada */}            
             <Route path="*" element={<Notfound />} />

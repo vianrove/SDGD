@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Row from "../components/row";
+import '../components/styles/ShoppingCart.css'
 class ShoppingCart extends React.Component{
   state ={ 
     List:[
@@ -26,6 +27,7 @@ class ShoppingCart extends React.Component{
     return (
       <div className="ShoppingCart">
         <Navbar/>
+        <div className="carrito">
         <h2>Bienvenido, Su Carrito: </h2>
         <table>
           <tr>
@@ -35,7 +37,7 @@ class ShoppingCart extends React.Component{
           </tr>
           {this.state.Carrito.bag.map(product =><Row data={product}/>)}
         </table>
-          
+        </div>  
         
         <Footer/>
       </div>

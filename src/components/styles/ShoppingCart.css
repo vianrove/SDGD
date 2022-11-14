@@ -1,0 +1,30 @@
+.carrito{
+    padding: 100px;
+    padding-bottom: 500px;
+}
+h2{
+    text-align: center;
+}
+table{
+    display: blocks;
+    margin: auto;
+}
+th, tr{
+    color:rgb(252, 252, 252);
+    width: 300px;
+}
+
+th{
+    padding: 20px;
+    background-color: rgb(38, 68, 55);
+    border-radius: 10px;
+
+}
+
+tr{
+    background-color: rgba(75, 144, 114, 0.625);
+    text-align: center;
+    height: 28px;
+    border-radius: 25px;
+
+}

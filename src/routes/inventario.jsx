@@ -1,22 +1,25 @@
 import React from "react"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Card from '../components/card';
+import Card from '../components/cardEdit';
 import '../components/styles/Home.css'
-class Home extends React.Component {
+
+class Inventario extends React.Component {
+
+  
   render(){
-    console.log(this.props.products);
     return (
-      <div className="home">
-        <Navbar/>
+    <div className="inventario">
+      <Navbar/>
         <div className="Content">
-          <p>pagina principal</p>
+          <p>inventario</p>
           {this.props.products.map( data =><Card data={data}/>)}
         </div>
-        <Footer/>
-      </div>
-    )
-  }
-  
-  }
-  export default Home;
+      <Footer/>
+    </div>
+      )
+    }
+    
+}
+    
+export default Inventario;

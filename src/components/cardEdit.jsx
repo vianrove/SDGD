@@ -8,6 +8,7 @@ class Card extends React.Component{
         <h3>{this.props.data.Title}</h3>
         <p>${this.props.data.precio}</p>
         <button>Agregar al carrito</button>
+        <button style={{"background-color":"red", "color":'white'}}>eliminar</button>
       </div>
     )
   }
