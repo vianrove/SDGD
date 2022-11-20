@@ -1,0 +1,6 @@
+.container-paid{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    max-width: 200px;
+    margin: auto;
+}

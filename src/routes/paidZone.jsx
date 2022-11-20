@@ -1,10 +1,29 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-function App() {
-
+import React from "react";
+import '../components/styles/paid.css';
+class PaidZone extends React.Component {
+  state={
+    orden:{
+      id:5,
+      totalPrice: 2000,
+    }
+  }
+  render(){
     return (
-      <div className="App">
-        
+      <div>
+        <Navbar/>
+      <div className="container-paid">
+        <h1>Orden #{this.state.orden.id}</h1>
+        <button>efectivo</button>
+        <button>tarjeta debito</button>
+        <button>tarjeta credito</button>
+      </div>
+      <Footer/>
       </div>
     )
   }
+    
+}
+
+export default PaidZone;

@@ -1,15 +1,43 @@
 .card{
     background-color: rgba(109, 137, 100, 0.795);
-    margin-bottom: 2%;
+    margin-bottom: 10%;
     border: 2px rgba(66, 92, 58, 0.574) solid;
     border-radius: 15px;
     color: rgb(207, 199, 199);
-    padding: 5px;
+    padding: 10px;
     padding-bottom: 0;
-    width: 27%;
+    width: 200px;
+    height: 280px;
+}
+.card img{
+    width:180px;
+    height: 120px;
 }
 
 .card button{
+    display: block;
     background-color: rgb(71, 197, 155);
-    margin: 0;
+    text-align: center;
+    margin: auto;
+    height: 60px;
+    margin-bottom: 5px;
+    width: 150px;
+    padding: 10px;
+}
+
+.card button:hover{
+    background-color:rgb(55, 113, 94);
+}
+
+@media (max-width: 600px){
+    .card{
+        width: 180px;
+        
+    }
+    .card button{
+        display: block;
+        font-size:15px;
+        padding: 0px;
+        height: 50px;
+    }
 }

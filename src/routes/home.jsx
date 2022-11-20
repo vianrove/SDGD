@@ -11,7 +11,9 @@ class Home extends React.Component {
         <Navbar/>
         <div className="Content">
           <p>pagina principal</p>
-          {this.props.products.map( data =><Card data={data}/>)}
+          <div className="grid-Content">
+            {this.props.products.map( data =><Card data={data}/>)}
+          </div>        
         </div>
         <Footer/>
       </div>
