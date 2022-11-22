@@ -16,7 +16,18 @@ import Inventario from './Routes/inventario';
 import ProductView from './Routes/productView';
 import PaidZone from './Routes/paidZone';
 const App = ()=>{
-
+  /*const [arr2, setArr2] = React.useState([])
+  React.useEffect(()=>{
+    getData();
+  },[])
+  const getData = async ()=>{
+    const response = await fetch('https://store-api-nodejs-2.herokuapp.com/catalogo');
+    
+    console.log(response)
+    const responseJson = await response.json()
+    console.log(responseJson)
+    setArr2(responseJson)
+  }*/
   const arr = [{ ISBN:1, Title:'Calculo vectorial', muestra:200, venta:187, precio:50, img1:'https://pictures.abebooks.com/isbn/9788478290697-es.jpg', img2:'' },{ ISBN:2, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'https://vagodeinternet.com/wp-content/uploads/2021/01/Que-es-un-ensayo-escrito-1200x700.png', img2:'' },{ ISBN:3, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'https://vagodeinternet.com/wp-content/uploads/2021/01/Que-es-un-ensayo-escrito-1200x700.png', img2:'' },{ ISBN:4, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'https://vagodeinternet.com/wp-content/uploads/2021/01/Que-es-un-ensayo-escrito-1200x700.png', img2:'' }]
 
   return (

@@ -1,7 +1,7 @@
 import React from "react"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import axios from "axios";
 class CrearElemento extends React.Component {
   
   state ={
@@ -10,6 +10,7 @@ class CrearElemento extends React.Component {
       Title:'',
       muestra:0,
       venta:0,
+      precio:0,
       img1:'',
       img2:''
     }
@@ -22,7 +23,15 @@ class CrearElemento extends React.Component {
         [e.target.name]: e.target.value
       }
     });
-    console.log(this.state.form)
+  }
+  sendData = async (e)=>{
+    e.preventDefault();
+    let url ='https://store-api-nodejs-2.herokuapp.com/Add' //import.meta.env.VITE_URL_LOGIN;
+    //url=url+'login';
+    //console.log(url)
+    await axios.post(url,this.state.document)
+    .then(response =>console.log(response.data))
+    .catch((err)=>console.log(err))
   }
   render(){ 
     return (
@@ -31,17 +40,19 @@ class CrearElemento extends React.Component {
         <div className="flex-wrapper-centered">
           <div className="content-wrapper">
             <h1 style={{fontWeight:"700", fontSize:"50px", textAlign:"center"}}>Registro de documento</h1>
-            <form action="" method="post">
+            <form onSubmit={this.sendData}>
               <label htmlFor="Title">Titulo</label>
-              <input type="text" name="Title" placeholder="Title" onChange={this.handleChange}/>
+              <input type="text" name="Title" value={this.state.document.Title} onChange={this.handleChange}/>
               <label htmlFor="muestra">numero de ejemplares</label>
-              <input type="number" name="muestra" min="0" onChange={this.handleChange}/>
+              <input type="number" name="muestra" value={this.state.document.muestra} min="0" onChange={this.handleChange}/>
               <label htmlFor="venta">numero para la venta</label>
-              <input type="number" name="venta" min="0"  onChange={this.handleChange}/>
+              <input type="number" name="venta" value={this.state.document.venta} min="0"  onChange={this.handleChange}/>
+              <label htmlFor="precio">precio de venta</label>
+              <input type="number" name="precio" value={this.state.document.precio} min="0"  onChange={this.handleChange}/>
               <label htmlFor="img1">Url de la portada</label>
-              <input type="text" name="img1"  onChange={this.handleChange}/>
-              <label htmlFor="img2">Url del respando</label>
-              <input type="text" name="img2"  onChange={this.handleChange}/>
+              <input type="text" name="img1" value={this.state.document.img1}  onChange={this.handleChange}/>
+              <label htmlFor="img2">Url del respaldo</label>
+              <input type="text" name="img2" value={this.state.document.img2} onChange={this.handleChange}/>
               <button id="boton">Registrar</button>
             </form>
           </div>
