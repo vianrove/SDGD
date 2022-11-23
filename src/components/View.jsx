@@ -7,7 +7,6 @@ class View extends React.Component{
       <div className="View">
         <div className="grid-img">
           <img src={this.props.element.img1} alt="portada del libro" />
-          {console.log(this.props.element.img1.length)}
           {/*<img src={this.props.element.img2} alt="respaldo del libro" />*/}
         </div>
         <h3>{this.props.element.Title}</h3>

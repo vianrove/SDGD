@@ -49,3 +49,7 @@
     font-family: sans-serif;
     font-weight:bold;
 }
+.imgProfile{
+    filter:invert(40%) sepia(21%) saturate(452%) hue-rotate(41deg) brightness(99%) contrast(87%);
+    padding: 20px;
+}

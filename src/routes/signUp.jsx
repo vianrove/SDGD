@@ -1,7 +1,10 @@
 import React from "react"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import axios from "axios";
+import Cookies from "universal-cookie"
 
+const cookies = new Cookies();
 class SignUp extends React.Component {
   
   state ={
@@ -22,8 +25,33 @@ class SignUp extends React.Component {
         [e.target.name]: e.target.value
       }
     });
-    console.log(this.state.form)
   }
+
+  sesionUser= async (e)=>{
+    e.preventDefault();
+    let url = import.meta.env.VITE_URL_LOGIN;
+    url=url+'signUp';
+    console.log(url)
+    await axios.post(url,this.state.form)
+    .then(response =>{
+      //console.log(response.data)
+      if(response.data.message == 'success'){
+        console.log('LOGIN CORRECTO',response.data.data)
+        const {_id,firstName,lastName,email,contactNumber,age} = response.data.data;
+        cookies.set('_id',_id,{path:"/"})
+        cookies.set('firstName',firstName,{path:"/"})
+        cookies.set('lastName',lastName,{path:"/"})
+        cookies.set('contactNumber',contactNumber,{path:"/"})
+        cookies.set('age',age,{path:"/"})
+        cookies.set('email',email,{path:"/"})
+        window.location.href="./";
+      }else{
+        alert('error interno')
+      }
+    })
+    .catch((err)=>console.log(err))
+  }
+//.then(response=>{})
   render(){ 
     return (
       <div>
@@ -31,7 +59,7 @@ class SignUp extends React.Component {
         <div className="flex-wrapper-centered">
           <div className="content-wrapper">
             <h1 style={{fontWeight:"700", fontSize:"50px", textAlign:"center"}}>Registra tu cuenta</h1>
-            <form action="" method="post">
+            <form onSubmit={this.sesionUser}>
               <label htmlFor="firstName">Nombre</label>
               <input type="text" name="firstName" placeholder="Enter your first name" onChange={this.handleChange}/>
               <label htmlFor="lastName">Apellido</label>
@@ -43,7 +71,7 @@ class SignUp extends React.Component {
               <label htmlFor="password">Contraseña</label>
               <input type="password" name="password" placeholder="Enter your password" onChange={this.handleChange}/>
               <label htmlFor="contactNumber">Teléfono de contacto</label>
-              <input type="password" name="contactNumber" placeholder="Enter your phone number" onChange={this.handleChange}/>
+              <input type="text" name="contactNumber" placeholder="Enter your phone number" onChange={this.handleChange}/>
               <button id="boton">Registrar</button>
             </form>
           </div>

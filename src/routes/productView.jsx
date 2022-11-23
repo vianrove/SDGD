@@ -9,7 +9,6 @@ const ProductView = (props)=>{
         let { ISBN } = useParams();
         ISBN = parseInt(ISBN)
         const posicion = props.data.find((indice)=>indice.ISBN===ISBN)
-        console.log(posicion)
         return (
             <div className="productView">
               <Navbar/>

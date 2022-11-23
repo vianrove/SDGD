@@ -2,7 +2,10 @@ import React from "react"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from '../components/card';
-import '../components/styles/Home.css'
+import '../components/styles/Home.css';
+import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 const Home = (props)=>{
     let estado = false
     const [arr2, setArr2] = React.useState([])
@@ -10,28 +13,29 @@ const Home = (props)=>{
       getData();
     },[])
     const getData = async ()=>{
-    const response = await fetch('https://store-api-nodejs-2.herokuapp.com/catalogo');    
+    let url = import.meta.env.VITE_URL_STORE; 
+    url=url+'catalogo';
+    const response = await fetch(url);    
     if(response.status==500){ estado = true};
     const responseJson = await response.json()
-    console.log(responseJson)
+    //console.log(responseJson)
     setArr2(responseJson)
   }
   const validation = ()=>{
     if(estado){
-      return(props.products.map( data =><Card data={data}/>))
+      return(props.products.map( data =><Card key={data.ISBN} data={data}/>))
     }else{
-      return(arr2.map( data =><Card data={data}/>))  
+      return(arr2.map( data =><Card key={data.ISBN} data={data}/>))  
     }
   }
-    //console.log(this.props.products);
+
     return (
       <div className="home">
-        <Navbar/>
+        <Navbar />
         <div className="Content">
           <p>pagina principal</p>
           <div className="grid-Content">
-            {/*this.props.products*/ validation()
-            }
+            { validation() }
           </div>        
         </div>
         <Footer/>

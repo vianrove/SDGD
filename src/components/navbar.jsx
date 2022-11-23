@@ -1,10 +1,14 @@
 import "./styles/Navbar.css";
 import { Link } from "react-router-dom";
+import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="left">
+        <Link to="/shoppingcart" style={{padding:"20px"}}>Mis compras</Link>
       </div>
       <div className="center">
         <div className="imgback">
@@ -14,9 +18,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="right">
+        <Link to="/profile"><img src="iconProfile.png" className="imgProfile" alt="profile button"/></Link>
+        {/*<Link ><img src="SignOutIcon.png" className="imgProfile" alt="profile button"/></Link>*/}
       </div>
     </div>
   )
 }
   
-export default Navbar
+export default Navbar;
