@@ -43,22 +43,3 @@ const App = ()=>{
 }
 
 export default App;
-
-
-/*const url =`${import.meta.env.VITE_URL_STORE}catalogo`;
-  const [todos,setTodos] = useState()*/
-  /*const fetchApi = async ()=>{
-    const response = await fetch(url);
-    
-    console.log(response)
-    const responseJson = await response.json()
-    console.log(responseJson)
-    setTodos(responseJson)
-  }*/
-  /*useEffect(()=>{
-    fetch(url)
-    .then((res)=>res.json())
-    .then((data)=>setTodos(data))
-    .catch((err)=>console.log(err));
-    //fetchApi()
-  },[])*/

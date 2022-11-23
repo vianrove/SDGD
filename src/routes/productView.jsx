@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer"
 import { useParams } from "react-router-dom";
 import View from "../components/View";
 import "../components/styles/productView.css";

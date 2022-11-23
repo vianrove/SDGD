@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer"
 import Row from "../components/row";
 import '../components/styles/ShoppingCart.css'
 class ShoppingCart extends React.Component{

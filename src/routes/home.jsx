@@ -1,6 +1,6 @@
 import React from "react"
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer"
 import Card from '../components/card';
 import '../components/styles/Home.css';
 import Cookies from "universal-cookie";
