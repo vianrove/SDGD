@@ -2,47 +2,50 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer"
 import Row from "../components/row";
-import '../components/styles/ShoppingCart.css'
-class ShoppingCart extends React.Component{
-  state ={ 
-    List:[
-      {
-        ISBN:0,
-        Title:"",
-        Price:100,
-      }
-    ],
-    Carrito:{
-      UserID:"636058e5530bbc20c01e9c41",
-      bag:[
-        {
-          ISBN:1,
-          amount:3,
-          Totalprice:300
-        }
-      ]
+import Cookies from "universal-cookie";
+import '../components/styles/ShoppingCart.css';
+import { Link } from "react-router-dom";
+const cookies = new Cookies();
+const ShoppingCart = ()=>{
+  const [arr3, setArr3] = React.useState([])
+    React.useEffect(()=>{
+      getData();
+    },[])
+
+    const getData = async ()=>{
+      let url = import.meta.env.VITE_URL_SHOPPINGCART;
+      url=url+`${cookies.get('compraId')}/${cookies.get('_id')}`; 
+      const response = await fetch(url);    
+      const responseJson = await response.json()
+      console.log(responseJson)
+      setArr3(responseJson.bag)
     }
-  }
-  render(){
+  
+
+  if(cookies.get('_id')){
     return (
-      <div className="ShoppingCart">
-        <Navbar/>
-        <div className="carrito">
-        <h2>Bienvenido, Su Carrito: </h2>
-        <table>
-          <tr>
-            <th>Codigo de producto</th>
-            <th>Catidad</th>
-            <th>Precio</th>
-          </tr>
-          {this.state.Carrito.bag.map(product =><Row data={product}/>)}
-        </table>
-        </div>  
-        
-        <Footer/>
-      </div>
+    <div className="ShoppingCart">
+      <Navbar/>
+      <div className="carrito">
+      <h2>Bienvenido {cookies.get('firstName')}, Su Carrito: </h2>
+          <table>
+            <tr>
+              <th>Codigo de producto</th>
+              <th>Catidad</th>
+              <th>Precio</th>
+            </tr>
+            {arr3.map(product =><Row key={arr3.ISBN} data={product}/>)}
+          </table>
+          <Link className="btn-link" to="/paid">Continuar con la compra</Link>
+      </div>  
+          
+      <Footer/>
+    </div>
     )
-  }    
+  }else{
+    window.location.href = './profile';
+  }
+   
 }
 
 export default ShoppingCart;

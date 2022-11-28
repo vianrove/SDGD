@@ -8,8 +8,6 @@ import Cookies from "universal-cookie"
 const cookies = new Cookies();
 
 class Login extends React.Component {
- //let url = import.meta.env.VITE_URL_LOGIN;
- //url=url+'login';
   state={
     form:{
       email:'',

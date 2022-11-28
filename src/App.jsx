@@ -15,25 +15,52 @@ import ActualizarInv from './Routes/ActualizarInv';
 import Inventario from './Routes/inventario';
 import ProductView from './Routes/productView';
 import PaidZone from './Routes/paidZone';
-const App = ()=>{
-  const arr = [{ ISBN:1, Title:'Calculo vectorial', muestra:200, venta:187, precio:50, img1:'https://pictures.abebooks.com/isbn/9788478290697-es.jpg', img2:'' },{ ISBN:2, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'https://vagodeinternet.com/wp-content/uploads/2021/01/Que-es-un-ensayo-escrito-1200x700.png', img2:'' },{ ISBN:3, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'https://vagodeinternet.com/wp-content/uploads/2021/01/Que-es-un-ensayo-escrito-1200x700.png', img2:'' },{ ISBN:4, Title:'Ensayo Academico', muestra:5, venta:0, precio:0, img1:'https://vagodeinternet.com/wp-content/uploads/2021/01/Que-es-un-ensayo-escrito-1200x700.png', img2:'' }]
+import Table from './routes/table';
+
+const App = ()=>{ 
+    let estado = false
+    const [arr2, setArr2] = React.useState([])
+    const [arr3, setArr3] = React.useState([])
+    React.useEffect(()=>{
+      getData();
+    },[Home])
+
+    React.useEffect(()=>{
+      getData2();
+    },[Login])
+
+    const getData = async ()=>{
+    let url = import.meta.env.VITE_URL_STORE; 
+    url=url+'catalogo';
+    const response = await fetch(url);    
+    const responseJson = await response.json()
+    setArr2(responseJson)
+  }
+  const getData2 = async ()=>{
+    let url = import.meta.env.VITE_URL_LOGIN; 
+    url=url+'view';
+    const response = await fetch(url);    
+    const responseJson = await response.json()
+    setArr3(responseJson)
+  }
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home products={arr}/>} />
+            <Route path="/" element={<Home products={arr2}/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/edit" element={<EditProfile/>}/>
             <Route path="/shoppingcart" element={<ShoppingCart/>}/>
-            <Route path="/inventario" element={<Inventario products={arr}/>}/>
+            <Route path="/inventario" element={<Inventario products={arr2}/>}/>
             <Route path="/create" element={<CrearElemento/>}/>
-            <Route path="/update" element={<ActualizarInv/>}/>
-            <Route path="/view/:ISBN" element={<ProductView data={arr}/>}/>
+            <Route path="/update/:ISBN" element={<ActualizarInv data={arr2}/>}/>
+            <Route path="/view/:ISBN" element={<ProductView data={arr2}/>}/>
             <Route path='/FAQ' element={<FAQ/>}/>
             <Route path='/paid' element={<PaidZone/>}/>
+            <Route path='/table' element={<Table data={arr3}/>}/>
             {/* pagina no encontrada */}            
             <Route path="*" element={<Notfound />} />
         </Routes>
@@ -41,5 +68,4 @@ const App = ()=>{
     </div>
   )
 }
-
 export default App;

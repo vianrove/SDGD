@@ -29,6 +29,7 @@ class Profile extends React.Component{
         cookies.remove('lastName',{path:"/"})
         cookies.remove('contactNumber',{path:"/"})
         cookies.remove('age',{path:"/"})
+        //cookies.remove('compraId',{path:"/"})
         window.location.href="./";
       }
     

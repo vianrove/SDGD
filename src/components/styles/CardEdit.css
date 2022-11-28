@@ -1,0 +1,53 @@
+.cardE{
+    background-color: rgba(109, 137, 100, 0.795);
+    margin-bottom: 10%;
+    border: 2px rgba(66, 92, 58, 0.574) solid;
+    border-radius: 15px;
+    color: rgb(207, 199, 199);
+    padding: 10px;
+    padding-bottom: 0;
+    width: 200px;
+    height: 350px;
+}
+.cardE img{
+    width:180px;
+    height: 120px;
+}
+
+.cardE button{
+    display: block;
+    background-color: rgb(71, 197, 155);
+    text-align: center;
+    margin: auto;
+    height: 60px;
+    margin-bottom: 5px;
+    width: 150px;
+    padding: 10px;
+}
+.cardE .btn-delete{
+    background-color: red;
+    color: black;
+}
+
+.cardE button:hover{
+    background-color:rgb(55, 113, 94);
+    color: whitesmoke;
+}
+
+.cardE .btn-delete:hover{
+    background-color:rgb(114, 25, 25);
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 600px){
+    .cardE{
+        width: 180px;
+        
+    }
+    .cardE button{
+        display: block;
+        font-size:15px;
+        padding: 0px;
+        height: 50px;
+    }
+}

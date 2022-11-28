@@ -1,19 +1,65 @@
 import React from 'react';
 import '../components/styles/View.css';
+import Cookies from 'universal-cookie';
+import axios from 'axios';
 
-class View extends React.Component{
-  render(){
+const cookies = new Cookies();
+
+const View = (props)=>{
+  let url = import.meta.env.VITE_URL_SHOPPINGCART;
+  const saveShopping = async ()=>{
+  if(cookies.get('_id') && !cookies.get('compraId') ){
+    let body = {
+      UserID: cookies.get('_id'),
+      bag:[{"ISBN":props.element.ISBN,"amount":1,"Totalprice":props.element.precio}]
+    }
+    await axios.post(url,body)
+      .then(response =>{
+        console.log(response.data)
+        if(response.data.response == 'success'){
+          console.log('agregado al carrito')
+          const {_id} = response.data.doc;
+          cookies.set('compraId',_id,{path:"/"})
+          console.log(cookies.get('compraId'))
+          window.location.href="../shoppingcart";
+        }else{
+          alert('parece que a ocurrido algún error')
+        }
+      })
+      .catch((err)=>console.log(err))
+
+  }else if (cookies.get('_id') && cookies.get('compraId')){
+    await axios.get(url+`${cookies.get('compraId')}/${cookies.get('_id')}`)
+      .then(response =>{
+        //console.log(response.data)
+        let Data = response.data;
+        Data["bag"] = [...Data["bag"],{"ISBN":props.element.ISBN,"amount":1,"Totalprice":props.element.precio}];
+        sendUpdate(Data);
+      })
+      .catch((err)=>console.log(err))
+
+  }else{
+    window.location.href = '../profile';
+  }
+}
+const sendUpdate = async (data)=>{
+  await axios.put(url+`${cookies.get('compraId')}`,data)
+  .then(response =>{
+    console.log(response)     
+  })
+  .catch((err)=>console.log(err))
+ }
     return (
       <div className="View">
         <div className="grid-img">
-          <img src={this.props.element.img1} alt="portada del libro" />
+          <img src={props.element.img1} alt="portada del libro" />
           {/*<img src={this.props.element.img2} alt="respaldo del libro" />*/}
         </div>
-        <h3>{this.props.element.Title}</h3>
-        <p>${this.props.element.precio}</p>
-        <button>Agregar al carrito</button>  
+        <h3>{props.element.Title}</h3>
+        <p>${props.element.precio}</p>
+        <button onClick={()=>saveShopping()}>Agregar al carrito</button>  
       </div>
     )
   }
-}
+
 export default View;

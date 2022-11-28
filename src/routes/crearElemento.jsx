@@ -26,11 +26,14 @@ class CrearElemento extends React.Component {
   }
   sendData = async (e)=>{
     e.preventDefault();
-    let url = import.meta.env.VITE_URL_STORE; //'https://store-api-nodejs-2.herokuapp.com/Add' //import.meta.env.VITE_URL_LOGIN;
+    let url = import.meta.env.VITE_URL_STORE;
     url=url+'Add';
     //console.log(url)
     await axios.post(url,this.state.document)
-    .then(response =>console.log(response.data))
+    .then(response =>{
+      console.log(response.data)
+      window.location.href='./inventario'
+    })
     .catch((err)=>console.log(err))
   }
   render(){ 

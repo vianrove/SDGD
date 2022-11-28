@@ -29,15 +29,15 @@ class SignUp extends React.Component {
 
   sesionUser= async (e)=>{
     e.preventDefault();
-    let url = import.meta.env.VITE_URL_LOGIN;
-    url=url+'signUp';
-    console.log(url)
+    let url = import.meta.env.VITE_URL_LOGIN2;
     await axios.post(url,this.state.form)
     .then(response =>{
-      //console.log(response.data)
-      if(response.data.message == 'success'){
-        console.log('LOGIN CORRECTO',response.data.data)
-        const {_id,firstName,lastName,email,contactNumber,age} = response.data.data;
+      let Data = response.data;
+      if(response.message){
+        alert('error interno')       
+      }else{
+        console.log('Registro CORRECTO',Data)
+        const {_id,firstName,lastName,email,contactNumber,age} = Data;
         cookies.set('_id',_id,{path:"/"})
         cookies.set('firstName',firstName,{path:"/"})
         cookies.set('lastName',lastName,{path:"/"})
@@ -45,8 +45,6 @@ class SignUp extends React.Component {
         cookies.set('age',age,{path:"/"})
         cookies.set('email',email,{path:"/"})
         window.location.href="./";
-      }else{
-        alert('error interno')
       }
     })
     .catch((err)=>console.log(err))
