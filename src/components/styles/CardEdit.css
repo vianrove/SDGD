@@ -9,7 +9,7 @@
 .cardE img{
     border-radius: 5px;
     width:200px;
-    height: 230px;
+    height: 260px;
 }
 
 .cardE button{
@@ -32,6 +32,10 @@
 .cardE .btn-delete:hover{
     background-color:rgb(114, 25, 25);
     color: rgb(255, 255, 255);
+}
+
+.info {
+    height: 80px;
 }
 
 @media (max-width: 600px){

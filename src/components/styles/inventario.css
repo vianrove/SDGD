@@ -8,6 +8,13 @@ div .Content{
     margin-bottom: 50px;
 }
 
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
 .grid-Content{
     display: grid;
     grid-template-columns: auto auto auto auto;

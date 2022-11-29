@@ -4,20 +4,21 @@
     border-radius: 5px;
     color: #111C1C;
     width: 200px;
-    height: 320px;
+    height: 330px;
 }
 .card img{
     border-radius: 5px;
     width:200px;
-    height: 230px;
+    height: 260px;
+
 }
 
 .card h3{
-    margin-left: 5px;
+    margin: 3px auto 5px 5px;
 }
 
 .card p{
-    margin-left: 5px;
+    margin: 0 auto 2px 5px;
 }
 
 .card button{
@@ -30,6 +31,10 @@
 .card button:hover{
     background-color:#D9D9D9;
     transition: all 150ms ease-in;
+}
+
+.info {
+    height: 80px;
 }
 
 @media (max-width: 600px){

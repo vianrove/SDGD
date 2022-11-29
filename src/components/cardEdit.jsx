@@ -20,8 +20,10 @@ class Card extends React.Component{
     return (
       <div className="cardE">
         <img src={this.props.data.img1} alt="portada del libro" />
-        <h3>{this.props.data.Title}</h3>
-        <p>${this.props.data.precio}</p>
+        <div className='info'>
+          <h3>{this.props.data.Title}</h3>
+          <p>${this.props.data.precio}</p>
+        </div>
         <button onClick={()=>this.UpdateItem()} >Actualizar item</button>
         <button className="btn-delete" onClick={()=>this.DeleteItem()}>eliminar</button>
       </div>

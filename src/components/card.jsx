@@ -56,8 +56,10 @@ const Card = (props)=>{
     return (
       <div className="card">
         <Link to={route}><img src={props.data.img1} alt="portada del libro" /></Link>
-        <h3>{props.data.Title}</h3>
-        <p>${props.data.precio}</p>
+        <div className='info'>
+          <h3>{props.data.Title}</h3>
+          <p>${props.data.precio}</p>
+        </div>
         <button onClick={()=>saveShopping()}>Agregar al carrito</button>
       </div>
     )
