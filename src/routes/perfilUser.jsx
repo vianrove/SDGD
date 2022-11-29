@@ -35,19 +35,7 @@ class Profile extends React.Component{
     
     render(){
     if(cookies.get('_id') == undefined){
-        return(
-        <div>
-            <div className="profile">
-            <Navbar/>
-            <div className="flex-wrapper-centered">
-                <div className="content-wrapper-extended" style={{textAlign:"center"}}>
-                <Link to="/login">Login</Link><br/><br/>
-                <Link to="/signup">Sign up</Link>
-                </div>
-            </div>
-            <Footer/>
-        </div>
-        </div>)
+        window.location.href = './login'
     }else{
         return(
         <div className="profile">

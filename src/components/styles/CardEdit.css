@@ -1,31 +1,26 @@
 .cardE{
-    background-color: rgba(109, 137, 100, 0.795);
-    margin-bottom: 10%;
-    border: 2px rgba(66, 92, 58, 0.574) solid;
-    border-radius: 15px;
-    color: rgb(207, 199, 199);
-    padding: 10px;
-    padding-bottom: 0;
+    background-color: #406164;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    color: #111C1C;
     width: 200px;
-    height: 350px;
+    height: max-content;
 }
 .cardE img{
-    width:180px;
-    height: 120px;
+    border-radius: 5px;
+    width:200px;
+    height: 230px;
 }
 
 .cardE button{
-    display: block;
-    background-color: rgb(71, 197, 155);
-    text-align: center;
-    margin: auto;
-    height: 60px;
-    margin-bottom: 5px;
-    width: 150px;
-    padding: 10px;
+    margin-top: 5px;
+    width: 200px;
+    height: 50px;
+    padding: 0;
 }
-.cardE .btn-delete{
-    background-color: red;
+
+.btn-delete{
+    background-color: #812828;
     color: black;
 }
 
