@@ -9,8 +9,11 @@ const Home = (props)=>{
     return (
       <div className="home">
         <Navbar />
-        <div className="Content">
-          <p>pagina principal</p>
+        <div className="content">
+          <div className="top-content">
+            <h1>Bienvenido a SDGD</h1>
+            <p>A continuación puedes ver nuestros libros disponibles</p>
+          </div>
           <div className="grid-Content">
             {props.products.map( data =><Card key={data.ISBN} data={data}/>)}
           </div>        

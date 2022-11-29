@@ -1,41 +1,50 @@
 .card{
-    background-color: rgba(109, 137, 100, 0.795);
-    margin-bottom: 10%;
-    border: 2px rgba(66, 92, 58, 0.574) solid;
-    border-radius: 15px;
-    color: rgb(207, 199, 199);
-    padding: 10px;
-    padding-bottom: 0;
+    background-color: #406164;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    color: #111C1C;
     width: 200px;
-    height: 280px;
+    height: 320px;
 }
 .card img{
-    width:180px;
-    height: 120px;
+    border-radius: 5px;
+    width:200px;
+    height: 230px;
+}
+
+.card h3{
+    margin-left: 5px;
+}
+
+.card p{
+    margin-left: 5px;
 }
 
 .card button{
-    display: block;
-    background-color: rgb(71, 197, 155);
-    text-align: center;
-    margin: auto;
-    height: 60px;
-    margin-bottom: 5px;
-    width: 150px;
-    padding: 10px;
+    margin-top: 0;
+    width: 200px;
+    height: 50px;
+    padding: 0;
 }
 
 .card button:hover{
-    background-color:rgb(55, 113, 94);
+    background-color:#D9D9D9;
+    transition: all 150ms ease-in;
 }
 
 @media (max-width: 600px){
     .card{
-        width: 180px;
-        
+        width: 150px;
+        height: min-content;
+    }
+    .card img{
+        border-radius: 5px;
+        width: 150px;
+        height: 230px;
     }
     .card button{
         display: block;
+        width: 150px;
         font-size:15px;
         padding: 0px;
         height: 50px;

@@ -49,7 +49,27 @@
     font-family: sans-serif;
     font-weight:bold;
 }
-.imgProfile{
-    filter:invert(40%) sepia(21%) saturate(452%) hue-rotate(41deg) brightness(99%) contrast(87%);
+.navIcon{
     padding: 20px;
+    filter: invert(39%) sepia(23%) saturate(418%) hue-rotate(41deg) brightness(99%) contrast(86%);
+}
+
+@media (max-width: 600px){
+    .navbar{
+        height: 80px;
+    }
+
+    .center div {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .center div img {
+        height: 60px;
+        filter: drop-shadow(0 4px 1.5px rgba(0, 0, 0, 0.50));
+    }
+
+    .navIcon{
+        height: 40px;
+    }
 }

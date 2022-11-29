@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="left">
-        <Link to="/shoppingcart" style={{padding:"20px"}}>Mis compras</Link>
+      <Link to="/shoppingcart"><img src="shopping-cart.svg" className="navIcon" alt="shoppingCart button"/></Link>
       </div>
       <div className="center">
         <div className="imgback">
@@ -18,7 +18,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="right">
-        <Link to="/profile"><img src="iconProfile.png" className="imgProfile" alt="profile button"/></Link>
+        <Link to="/profile"><img src="account-icon.svg" className="navIcon" alt="profile button"/></Link>
         {/*<Link ><img src="SignOutIcon.png" className="imgProfile" alt="profile button"/></Link>*/}
       </div>
     </div>

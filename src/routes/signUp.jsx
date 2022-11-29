@@ -57,7 +57,7 @@ class SignUp extends React.Component {
         <Navbar/>
         <div className="flex-wrapper-centered">
           <div className="content-wrapper">
-            <h1 style={{fontWeight:"700", fontSize:"50px", textAlign:"center"}}>Registra tu cuenta</h1>
+            <h1>Registra tu cuenta</h1>
             <form onSubmit={this.sesionUser}>
               <label htmlFor="firstName">Nombre</label>
               <input type="text" name="firstName" placeholder="Enter your first name" onChange={this.handleChange}/>

@@ -1,15 +1,20 @@
-div .Content{
-    
+.content{
+    background-color: #111C1C;
+    border-radius: 5px;
+    width: max-content;
+    padding: 25px;
     margin: auto;
-    margin-left:10%;
-    display: block;
-    margin-bottom: 35%;
-   
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
+.top-content {
+    width: 80vw;
+}
 .grid-Content{
     display: grid;
     grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
 }
 
 @media (max-width: 500px){

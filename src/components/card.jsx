@@ -41,7 +41,7 @@ const Card = (props)=>{
         .catch((err)=>console.log(err))
 
     }else{
-      window.location.href = './profile';
+      window.location.href = './login';
     }
   }
   const sendUpdate = async (data)=>{

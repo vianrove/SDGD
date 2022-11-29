@@ -86,3 +86,7 @@ button {
   padding: 15px 25px 15px 25px;
   cursor: pointer;
 }
+
+@media (max-width: 600px){
+
+}

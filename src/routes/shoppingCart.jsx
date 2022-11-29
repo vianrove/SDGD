@@ -43,7 +43,7 @@ const ShoppingCart = ()=>{
     </div>
     )
   }else{
-    window.location.href = './profile';
+    window.location.href = './login';
   }
    
 }
