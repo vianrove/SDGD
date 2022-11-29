@@ -30,6 +30,7 @@ class SignUp extends React.Component {
   sesionUser= async (e)=>{
     e.preventDefault();
     let url = import.meta.env.VITE_URL_LOGIN2;
+    url=url+'clients';
     await axios.post(url,this.state.form)
     .then(response =>{
       let Data = response.data;

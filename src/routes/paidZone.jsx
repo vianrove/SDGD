@@ -49,10 +49,11 @@ class PaidZone extends React.Component{
   }
   PaidProcess = async (e)=>{
     e.preventDefault();
-    const url = import.meta.env.VITE_URL_PASARELA;
+    let url = import.meta.env.VITE_URL_PASARELA;
+    url=url+'payments';
     this.state.client.items = await GetData();
     console.log(this.state)
-    await axios.post(url+'/payments',this.state)
+    await axios.post(url,this.state)
       .then(response =>{
         console.log(response)
         cookies.remove('compraId',{path:"/"})
