@@ -55,9 +55,20 @@ const sendUpdate = async (data)=>{
           <img src={props.element.img1} alt="portada del libro" />
           {/*<img src={this.props.element.img2} alt="respaldo del libro" />*/}
         </div>
-        <h3>{props.element.Title}</h3>
-        <p>${props.element.precio}</p>
-        <button onClick={()=>saveShopping()}>Agregar al carrito</button>  
+        <div className='info'>
+          <h1>{props.element.Title}</h1>
+          <h3>${props.element.precio}</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Cras tempus, nulla id maximus molestie, urna ante accumsan nibh, 
+            tincidunt eleifend ligula urna a tellus. Vivamus orci justo, 
+            suscipit vitae dolor at, sodales placerat mauris. In at velit dui. 
+            Sed feugiat iaculis sagittis. Cras id lacus sit amet sem vestibulum 
+            lobortis sed in turpis. Duis est odio, fermentum sit amet lorem porta, 
+            tristique cursus massa. Integer imperdiet lacus quam, sit amet tincidunt 
+            enim pulvinar non. Vivamus convallis metus vitae diam vestibulum, 
+            et consectetur mi dapibus.</p>
+          <button onClick={()=>saveShopping()}>Agregar al carrito</button>  
+        </div>
       </div>
     )
   }

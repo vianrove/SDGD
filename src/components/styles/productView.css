@@ -1,5 +1,6 @@
 .container{
-    background-color: rgba(255, 255, 255, 0.281);
-    color: rgba(248, 248, 248, 0.767);
-    height: 500px;
+    background-color: #111C1C;
+    margin: 50px;
+    border-radius: 5px;
+    padding: 25px;
 }
