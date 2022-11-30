@@ -22,3 +22,14 @@ div .View{
 .View button{
     margin:auto;
 }
+
+
+@media (max-width: 600px){
+    .View{
+        flex-direction: column;
+    }
+
+    .View img{
+        height: 400px;
+    }
+}

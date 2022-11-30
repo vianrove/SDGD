@@ -4,3 +4,9 @@
     border-radius: 5px;
     padding: 25px;
 }
+
+@media (max-width: 600px){
+    .container{
+        margin:10px;
+    }
+}

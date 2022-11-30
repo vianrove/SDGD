@@ -8,3 +8,14 @@
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+@media (max-width: 600px){
+    .container-paid{
+        text-align: center;
+        margin:10px;
+    }
+
+    .container-paid h1{
+        font-size: 25px;
+    }
+}
