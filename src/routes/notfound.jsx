@@ -9,7 +9,7 @@ function Notfound(){
         <div className="flex-wrapper-centered">
           <div className="content-wrapper">
             <h1 style={{textAlign: "center"}}>Página no encontrada</h1>
-            <img src="NotFoundWeb.png" alt="not found image"/>
+            <img style={{width: "350px"}} src="NotFoundWeb.png" alt="not found image"/>
           </div>
         </div>
         <Footer/>
