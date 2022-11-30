@@ -55,7 +55,7 @@ const sendUpdate = async (data)=>{
           <img src={props.element.img1} alt="portada del libro" />
           {/*<img src={this.props.element.img2} alt="respaldo del libro" />*/}
         </div>
-        <div className='info'>
+        <div className='productInfo'>
           <h1>{props.element.Title}</h1>
           <h3>${props.element.precio}</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

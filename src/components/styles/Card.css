@@ -2,7 +2,7 @@
     background-color: #406164;
     margin-bottom: 50px;
     border-radius: 5px;
-    color: #111C1C;
+    color: #111c1c;
     width: 200px;
     height: 330px;
 }
@@ -34,6 +34,7 @@
 }
 
 .info {
+    max-width: 600px;
     height: 80px;
 }
 

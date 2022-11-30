@@ -6,8 +6,9 @@ div .View{
     align-items: center;
 }
 
-.info {
+.productInfo {
     max-width: 600px;
+    height: fit-content;
 }
 
 .grid-img{
