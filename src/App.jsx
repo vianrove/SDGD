@@ -18,7 +18,6 @@ import PaidZone from './Routes/paidZone';
 import Table from './routes/table';
 
 const App = ()=>{ 
-    let estado = false
     const [arr2, setArr2] = React.useState([])
     const [arr3, setArr3] = React.useState([])
     React.useEffect(()=>{

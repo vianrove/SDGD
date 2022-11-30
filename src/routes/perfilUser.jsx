@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer"
 import Cookies from "universal-cookie"
-import { Link } from "react-router-dom";
 
 const cookies = new Cookies();
 

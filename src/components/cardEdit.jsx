@@ -6,7 +6,6 @@ class Card extends React.Component{
     window.location.href=`./update/${this.props.data.ISBN}`;
   }
   async DeleteItem(){
-    let body ={ISBN:this.props.data.ISBN}
     let url = import.meta.env.VITE_URL_STORE;
     url=url+`delete/${this.props.data.ISBN}`;
     await axios.delete(url)
