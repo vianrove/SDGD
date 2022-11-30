@@ -1,6 +1,10 @@
 .container-paid{
+    background-color: #111C1C;
     display: grid;
     grid-template-rows: auto auto auto;
-    max-width: 200px;
+    padding: 25px;
+    width: fit-content;
     margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }

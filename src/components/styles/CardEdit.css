@@ -1,16 +1,21 @@
 .cardE{
-    background-color: #406164;
-    margin-bottom: 50px;
     border-radius: 5px;
     color: #111C1C;
     width: 200px;
-    height: max-content;
 }
 .cardE img{
     border-radius: 5px;
     width:200px;
     height: 260px;
 }
+.cardE h3{
+    margin: 3px auto 5px 5px;
+}
+
+.cardE p{
+    margin: 0 auto 2px 5px;
+}
+
 
 .cardE button{
     margin-top: 5px;
@@ -33,9 +38,12 @@
     background-color:rgb(114, 25, 25);
     color: rgb(255, 255, 255);
 }
-
-.info {
-    height: 80px;
+.cardinfo {
+    border-radius: 5px;
+    padding-top: 5px;
+    background-color: #406164;
+    height: 70px;
+    margin: 0;
 }
 
 @media (max-width: 600px){

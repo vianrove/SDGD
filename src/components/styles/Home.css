@@ -1,16 +1,15 @@
 .content{
     background-color: #111C1C;
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     padding: 25px;
-    width: fit-content;
+    max-width: 1000px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.top-content {
-    width: 80vw;
-}
 .grid-Content{
     display: grid;
     grid-template-columns: auto auto auto auto;

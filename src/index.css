@@ -17,6 +17,26 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #657053 #657053;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #111C1C;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #657053;
+  border-radius: 10px;
+  border: 3px solid #111C1C;
+}
+
 .flex-wrapper-centered {
   display: flex;
   flex-direction: column;

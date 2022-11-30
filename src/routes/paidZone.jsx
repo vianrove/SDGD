@@ -74,33 +74,31 @@ class PaidZone extends React.Component{
     return (
       <div>
         <Navbar/>
-      <div className="container-paid">
-        <h1>Orden #{cookies.get('compraId')}</h1>
-        <h2>tarjeta</h2>
-        <form onSubmit={this.PaidProcess}>
-        <label>tramite los datos</label>
-            <label htmlFor="state">Estado</label>
-            <input type="text" name="state"  onChange={this.handleChange}/>
-            <label htmlFor="city">Ciudad</label>
-            <input type="text" name="city"  onChange={this.handleChange}/>
-            <label htmlFor="street">Calle</label>
-            <input type="text" name="street"  onChange={this.handleChange}/>
-            <label htmlFor="address">Direccion</label>
-            <input type="text" name="address"  onChange={this.handleChange}/>
-        
-          <label htmlFor="cardName">nombre de la tarjeta</label>
-            <input type="text" name="cardName"  onChange={this.handleChange}/>
-            <label htmlFor="cardNumber">numero de tarjeta</label>
-            <input type="text" name="cardNumber"  onChange={this.handleChange}/>
-            <label htmlFor="expDate">Fecha de expiracion</label>
-            <input type="text" name="expDate"  onChange={this.handleChange}/>
-            <label htmlFor="securityCode">Codigo de seguridad</label>
-            <input type="password" name="securityCode"  onChange={this.handleChange}/>   
-            <button id="boton">aceptar</button>
-        </form>
-
-      </div>
-      <Footer/>
+        <div className="container-paid">
+          <h1>Orden #{cookies.get('compraId')}</h1>
+          <form onSubmit={this.PaidProcess}>
+          <label>Datos de envío y pago</label>
+              <label htmlFor="state">Estado</label>
+              <input type="text" name="state"  onChange={this.handleChange}/>
+              <label htmlFor="city">Ciudad</label>
+              <input type="text" name="city"  onChange={this.handleChange}/>
+              <label htmlFor="street">Calle</label>
+              <input type="text" name="street"  onChange={this.handleChange}/>
+              <label htmlFor="address">Direccion</label>
+              <input type="text" name="address"  onChange={this.handleChange}/>
+          
+            <label htmlFor="cardName">nombre de la tarjeta</label>
+              <input type="text" name="cardName"  onChange={this.handleChange}/>
+              <label htmlFor="cardNumber">numero de tarjeta</label>
+              <input type="text" name="cardNumber"  onChange={this.handleChange}/>
+              <label htmlFor="expDate">Fecha de expiracion</label>
+              <input type="text" name="expDate"  onChange={this.handleChange}/>
+              <label htmlFor="securityCode">Codigo de seguridad</label>
+              <input type="password" name="securityCode"  onChange={this.handleChange}/>   
+              <button id="boton">aceptar</button>
+          </form>
+        </div>
+        <Footer/>
       </div>
     )
   }

@@ -20,7 +20,7 @@ class Card extends React.Component{
     return (
       <div className="cardE">
         <img src={this.props.data.img1} alt="portada del libro" />
-        <div className='info'>
+        <div className='cardinfo'>
           <h3>{this.props.data.Title}</h3>
           <p>${this.props.data.precio}</p>
         </div>
