@@ -37,6 +37,9 @@ a:-webkit-any-link {
   border: 3px solid #111C1C;
 }
 
+.svg-image-colored {
+  filter: invert(39%) sepia(23%) saturate(418%) hue-rotate(41deg) brightness(99%) contrast(86%);
+}
 .flex-wrapper-centered {
   display: flex;
   flex-direction: column;

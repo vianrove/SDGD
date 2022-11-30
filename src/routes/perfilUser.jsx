@@ -41,7 +41,9 @@ class Profile extends React.Component{
         <div className="profile">
             <Navbar/>
             <div className="flex-wrapper-centered">
-                <div className="content-wrapper-extended" style={{textAlign:"center"}}>
+                <div className="content-wrapper" style={{textAlign:"center"}}>
+                    <img src="./account-settings.svg" className="svg-image-colored" alt="account"/>
+                    <br />
                     <span>Nombre: {userPrototype.firstName}</span><br/>
                     <span>Apellido: {userPrototype.lastName}</span><br/>
                     <span>Edad: {userPrototype.age}</span><br/>
