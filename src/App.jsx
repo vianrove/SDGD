@@ -2,19 +2,19 @@ import React from 'react'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 //rutas
-import Home from './Routes/home';
+import Home from './routes/home';
 import Notfound from './routes/notfound';
-import Login from './Routes/login';
-import SignUp from './Routes/signUp';
-import Profile from './Routes/perfilUser';
-import FAQ from './Routes/FAQ';
-import EditProfile from './Routes/editProfile';
-import ShoppingCart from './Routes/shoppingCart';
-import CrearElemento from './Routes/crearElemento';
-import ActualizarInv from './Routes/ActualizarInv';
-import Inventario from './Routes/inventario';
-import ProductView from './Routes/productView';
-import PaidZone from './Routes/paidZone';
+import Login from './routes/login';
+import SignUp from './routes/signUp';
+import Profile from './routes/perfilUser';
+import FAQ from './routes/FAQ';
+import EditProfile from './routes/editProfile';
+import ShoppingCart from './routes/shoppingCart';
+import CrearElemento from './routes/crearElemento';
+import ActualizarInv from './routes/ActualizarInv';
+import Inventario from './routes/inventario';
+import ProductView from './routes/productView';
+import PaidZone from './routes/paidZone';
 import Table from './routes/table';
 
 const App = ()=>{ 

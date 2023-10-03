@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer"
-import Card from '../components/cardEdit';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
+import Card from '../components/CardEdit';
 import '../components/styles/inventario.css';
 
 const Inventario = (props)=>{

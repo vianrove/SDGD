@@ -1,4 +1,4 @@
-import "./styles/Navbar.css";
+import "./styles/navbar.css";
 import { Link } from "react-router-dom";
 import account from "/account-icon.svg";
 import ShoppingCart from "/shopping-cart.svg";

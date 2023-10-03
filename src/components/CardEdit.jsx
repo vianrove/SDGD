@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/styles/CardEdit.css';
+import '../components/styles/cardedit.css';
 import axios from 'axios';
 class Card extends React.Component{
   UpdateItem (){

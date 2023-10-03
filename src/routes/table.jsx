@@ -1,7 +1,7 @@
 import React from "react"
-import Navbar from "../components/navbar";
-import Footer from "../components/footer"
-import Row2 from "../components/row2";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
+import Row2 from "../components/Row2";
 import "../components/styles/table.css";
 class Table extends React.Component{
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Cookies from 'universal-cookie';
-import '../components/styles/Card.css';
+import '../components/styles/card.css';
 import axios from 'axios';
 
 const cookies = new Cookies();

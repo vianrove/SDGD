@@ -1,8 +1,8 @@
 import React from "react"
-import Navbar from "../components/navbar";
-import Footer from "../components/footer"
-import Card from '../components/card.jsx';
-import '../components/styles/Home.css';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
+import Card from '../components/Card.jsx';
+import '../components/styles/home.css';
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
 const Home = (props)=>{

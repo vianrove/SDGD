@@ -1,5 +1,5 @@
-import Navbar from "../components/navbar";
-import Footer from "../components/footer"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 import React from "react";
 import '../components/styles/paid.css';
 import Cookies from "universal-cookie";

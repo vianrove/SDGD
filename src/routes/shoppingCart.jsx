@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer"
-import Row from "../components/row";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
+import Row from "../components/Row";
 import Cookies from "universal-cookie";
-import '../components/styles/ShoppingCart.css';
+import '../components/styles/shoppingcart.css';
 import { Link } from "react-router-dom";
 const cookies = new Cookies();
 const ShoppingCart = ()=>{

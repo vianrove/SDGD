@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/styles/View.css';
+import '../components/styles/view.css';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 

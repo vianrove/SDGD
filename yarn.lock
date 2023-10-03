@@ -503,7 +503,7 @@ esbuild-linux-32@0.15.13:
 
 esbuild-linux-64@0.15.13:
   version "0.15.13"
-  resolved "https://registry.yarnpkg.com/esbuild-linux-64/-/esbuild-linux-64-0.15.13.tgz#4264249281ea388ead948614b57fb1ddf7779a2c"
+  resolved "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.15.13.tgz"
   integrity sha512-rXmnArVNio6yANSqDQlIO4WiP+Cv7+9EuAHNnag7rByAqFVuRusLbGi2697A5dFPNXoO//IiogVwi3AdcfPC6A==
 
 esbuild-linux-arm64@0.15.13:
@@ -558,7 +558,7 @@ esbuild-windows-32@0.15.13:
 
 esbuild-windows-64@0.15.13:
   version "0.15.13"
-  resolved "https://registry.npmjs.org/esbuild-windows-64/-/esbuild-windows-64-0.15.13.tgz"
+  resolved "https://registry.yarnpkg.com/esbuild-windows-64/-/esbuild-windows-64-0.15.13.tgz#1fca8c654392c0c31bdaaed168becfea80e20660"
   integrity sha512-Et6htEfGycjDrtqb2ng6nT+baesZPYQIW+HUEHK4D1ncggNrDNk3yoboYQ5KtiVrw/JaDMNttz8rrPubV/fvPQ==
 
 esbuild-windows-arm64@0.15.13:
@@ -619,9 +619,9 @@ form-data@^4.0.0:
     mime-types "^2.1.12"
 
 fsevents@~2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
-  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
+  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -669,7 +669,7 @@ jsesc@^2.5.1:
 
 json5@^2.2.1:
   version "2.2.3"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  resolved "https://registry.npmjs.org/json5/-/json5-2.2.3.tgz"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
@@ -816,7 +816,7 @@ scheduler@^0.23.0:
 
 semver@^6.3.0:
   version "6.3.1"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
+  resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
 source-map-js@^1.0.2:
@@ -864,7 +864,7 @@ update-browserslist-db@^1.0.9:
 
 vite@^3.2.7:
   version "3.2.7"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.2.7.tgz#35a62826bd4d6b778ae5db8766d023bcd4e7bef3"
+  resolved "https://registry.npmjs.org/vite/-/vite-3.2.7.tgz"
   integrity sha512-29pdXjk49xAP0QBr0xXqu2s5jiQIXNvE/xwd0vUizYT2Hzqe4BksNNoWllFVXJf4eLZ+UlVQmXfB4lWrc+t18g==
   dependencies:
     esbuild "^0.15.9"
@@ -873,3 +873,8 @@ vite@^3.2.7:
     rollup "^2.79.1"
   optionalDependencies:
     fsevents "~2.3.2"
+
+yarn@^1.22.19:
+  version "1.22.19"
+  resolved "https://registry.npmjs.org/yarn/-/yarn-1.22.19.tgz"
+  integrity sha512-/0V5q0WbslqnwP91tirOvldvYISzaqhClxzyUKXYxs07yUILIs5jx/k6CFe8bvKSkds5w+eiOqta39Wk3WxdcQ==
