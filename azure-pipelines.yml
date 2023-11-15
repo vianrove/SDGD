@@ -34,8 +34,8 @@ stages:
       - group: ARM
       steps:
         - script: |
+            cd terraform/
             set -e 
-
             terraform init -input=false
             terraform apply -input=false -auto-approve
           name: 'RunTerraform'
